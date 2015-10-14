@@ -7,13 +7,13 @@ public class Practica3 {
 
     public static void main(String[] args) throws FileNotFoundException {
         String pathName = "C:\\Users\\usuario\\Documents\\NetBeansProjects\\Practica 3\\Datos\\emailsfilev1.txt";
-        MailReader domains = new MailReader(pathName);
-        ArrayList<String> domis = domains.getDomainList();
+        MailReader domains = new MailReader(pathName);   
         
-        Histogram<String> sHistogram = DomainHistogramBuilder.execute(domis);
-        
-        
+        Histogram<String> sHistogram = 
+                DomainHistogramBuilder.execute(domains.getDomainList());
+     
         HistogramDisplay histo = new HistogramDisplay(sHistogram);
+        
         histo.execute();
     }
 }
